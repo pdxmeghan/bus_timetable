@@ -1,0 +1,9 @@
+<h1>Stops</h1>
+
+<ul>
+  <% @stops.each do |stop| %>
+    <li><%= "#{stop.station.name} / #{stop.line.name}" %></li>
+  <% end %>
+</ul>
+
+<%= link_to "New Stop", new_stop_path, :class => 'btn btn-default' %>
