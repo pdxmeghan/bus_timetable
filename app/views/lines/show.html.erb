@@ -1,0 +1,9 @@
+<%= content_for(:title, " #{@line.name} | Bus Station") %>
+
+<h1><%= @line.name %></h1>
+
+<p><%= link_to "Edit", edit_line_path(@line), :class => "btn btn-default" %></p>
+<p><%= link_to "Delete", line_path(@line),
+:data => {:confirm => "Are you sure?", :method => "delete"}, :class => "btn btn-danger" %></p>
+
+<%= link_to "All Lines", lines_path, :class => "btn btn-default" %>

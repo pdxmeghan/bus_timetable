@@ -1,0 +1,7 @@
+<%= content_for(:title, "#{@line.name} | Bus Station") %>
+
+<h1>Edit <%= @line.name %></h1>
+
+<%= render 'form' %>
+
+<%= link_to "All Lines", lines_path, :class => "btn btn-default" %>
