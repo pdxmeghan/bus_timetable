@@ -1,0 +1,8 @@
+<%= content_for(:title, "Edit station | Bus Station") %>
+
+<h1>Edit <%= @station.name %></h1>
+
+<%= render 'form' %>
+
+
+<%= link_to "Home Page", stations_path, :class => "btn btn-default" %>
