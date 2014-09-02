@@ -1,0 +1,3 @@
+class StationsController < ActionController
+
+end
