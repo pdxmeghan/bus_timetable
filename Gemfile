@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 
 gem 'rails'
 gem 'pg'
-gem 'sass-rails'
+gem 'sass-rails', '>= 3.2'
 gem 'uglifier'
 gem 'coffee-rails'
 gem 'jquery-rails'
@@ -11,6 +11,8 @@ gem 'turbolinks'
 gem 'jbuilder'
 gem 'sdoc'
 gem 'spring'
+gem 'bootstrap-sass', '~> 3.2.0'
+gem 'autoprefixer-rails'
 
 group :development do
   gem 'better_errors'
