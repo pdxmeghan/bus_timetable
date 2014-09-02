@@ -5,7 +5,6 @@ class StationsController < ApplicationController
 
   def new
     @station = Station.new
-    render
   end
 
   def create
@@ -34,6 +33,13 @@ class StationsController < ApplicationController
     else
       render 'edit'
     end
+  end
+
+  def destroy
+    @station = Station.find(params[:id])
+    @station.delete
+    flash[:notice] = "Your station has been destroyed"
+    redirect_to stations_path
   end
 
   private
