@@ -1,0 +1,7 @@
+<%= content_for(:title, "#{@stop.station.name} / #{@stop.line.name} | Bus Station") %>
+
+<h1>Edit <%= @stop.station.name + " / " + @stop.line.name %></h1>
+
+<%= render 'form' %>
+
+<%= link_to "All Stops", stops_path, :class => "btn btn-default" %>

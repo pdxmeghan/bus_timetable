@@ -2,7 +2,7 @@
 
 <ul>
   <% @stops.each do |stop| %>
-    <li><%= "#{stop.station.name} / #{stop.line.name}" %></li>
+    <li><%= link_to "#{stop.station.name} / #{stop.line.name}", stop_path(stop) %></li>
   <% end %>
 </ul>
 
