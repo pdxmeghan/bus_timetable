@@ -3,4 +3,5 @@ class Stop < ActiveRecord::Base
   validates :station_id, presence: true
   belongs_to :line
   belongs_to :station
+  has_many :arrivals
 end
