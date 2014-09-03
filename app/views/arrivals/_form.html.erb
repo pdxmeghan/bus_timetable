@@ -1,0 +1,12 @@
+<%= render("layouts/errors", :object => @arrival) %>
+
+<%= form_for (@arrival) do |f| %>
+  <div class = "form-group">
+    <%= f.label "New Arrival Time"%>
+    <%= f.text_field :time%>
+  </div>
+  <div class = "form-group">
+    <%= f.collection_select :stop_id, Stop.all, :id, :station_name %>
+  </div>
+  <%= f.submit(:class => "btn btn-primary") %>
+<% end %>

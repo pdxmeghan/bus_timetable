@@ -4,4 +4,8 @@ class Stop < ActiveRecord::Base
   belongs_to :line
   belongs_to :station
   has_many :arrivals
+
+  def station_name
+    "#{station.name}" + " | " + "#{line.name}"
+  end
 end
