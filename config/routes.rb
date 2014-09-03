@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
 
  resources :stations
- root to: 'stations#index'
 
+  root to: 'home#index'
  resources :lines
 
  resources :stops
