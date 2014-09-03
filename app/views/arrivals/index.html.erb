@@ -2,10 +2,10 @@
 
 <ul>
   <% @arrivals.each do |arrival| %>
-    <li><%= arrival.bus.number + " / " + arrival.line.name + " / " + arrival.time %>
+    <li><%= link_to "#{arrival.bus.number} / #{arrival.names} / #{arrival.time}", arrival_path(arrival) %></li>
   <% end %>
 </ul>
 
-<br><%= link_to "Create New Arrival", arrivals_path, :class => "btn btn-default" %>
+<br><%= link_to "Create New Arrival", new_arrival_path, :class => "btn btn-default" %>
 <br>
 <br><%= link_to "Home Page", root_path, :class => "btn btn-default" %>
