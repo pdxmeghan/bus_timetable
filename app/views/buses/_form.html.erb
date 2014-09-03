@@ -1,0 +1,14 @@
+<%= render("layouts/errors", :object => @bus) %>
+
+<%= form_for (@bus) do |f| %>
+  <p>Choose a bus</p>
+    <div class = "form-group">
+    <%= f.label :number %>
+    <%= f.text_field :number %>
+  </div>
+  <p> Choose a line</p>
+    <div class = "form-group">
+    <%= f.collection_select :line_id, Line.all, :id, :name %>
+  </div>
+  <%= f.submit(:class => "btn btn-primary") %>
+<% end %>
