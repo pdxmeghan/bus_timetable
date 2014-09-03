@@ -1,0 +1,7 @@
+<%= content_for(:title, " #{@bus.number} | Bus Station") %>
+
+<h1><%= @bus.number %></h1>
+<p>This bus operates on the: <%= @bus.line.name %></p>
+
+
+<%= link_to "See All Buses", buses_path, :class => 'btn btn-default' %>

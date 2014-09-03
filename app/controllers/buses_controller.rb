@@ -17,6 +17,10 @@ class BusesController < ApplicationController
     end
   end
 
+  def show
+    @bus = Bus.find(params[:id])
+  end
+
   private
   def user_params
     params.require(:bus).permit(:number, :line_id)
