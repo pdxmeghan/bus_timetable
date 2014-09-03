@@ -37,7 +37,7 @@ class LinesController < ApplicationController
 
   def destroy
     @line = Line.find(params[:id])
-    @line.delete
+    @line.destroy
     flash[:notice] = "Line has been destroyed"
     redirect_to lines_path
   end

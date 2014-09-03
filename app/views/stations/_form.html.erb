@@ -4,6 +4,13 @@
   <div class = "form-group">
     <%= f.label :name %>
     <%= f.text_field :name %>
+
   </div>
+  <div>
+    <% Line.all.each do |line| %>
+      <%= check_box_tag "station[line_ids][]", line.id, @station.line_ids.include?(line.id)%>
+      <%= line.name %>
+  </div>
+  <% end %>
   <%= f.submit(:class => "btn btn-primary") %>
 <% end %>
