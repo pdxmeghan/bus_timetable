@@ -8,4 +8,6 @@ Rails.application.routes.draw do
  resources :stops
 
  resources :buses
+
+ resources :arrivals
 end

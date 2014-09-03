@@ -11,7 +11,7 @@ class BusesController < ApplicationController
     @bus = Bus.create(user_params)
     if @bus.valid?
       flash[:notice] = "New Bus Added"
-      redirect_to bus_path
+      redirect_to bus_path(@bus)
     else
       render 'new'
     end
